@@ -78,7 +78,7 @@ max_date = pd.to_datetime(hour_df['dateday']).dt.date.max()
 
 with st.sidebar:
     # Logo
-    image_url = "https://github.com/asvrn/Bike-Sharing/blob/main/LOGO.png?raw=true"
+    image_url = "https://github.com/asvrn/bike_sharing/blob/main/img/LOGO.png?raw=true"
     st.image(image_url, caption='Rifqi Asverian Putra', use_column_width=True)
 
     st.sidebar.header("Filter:")
