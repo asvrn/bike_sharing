@@ -162,6 +162,7 @@ ax.tick_params(axis='x', labelsize=15)
 ax.tick_params(axis='y', labelsize=15)
 ax.set_facecolor('none')
 fig.patch.set_alpha(0.0)
+ax.get_yaxis().get_major_formatter().set_scientific(False)
 st.pyplot(fig)
 
 # 3
