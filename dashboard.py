@@ -150,8 +150,6 @@ weather_rent_df = weather_rent_df.sort_values(by='count', ascending=False)
 sns.barplot(
     x=weather_rent_df.index,
     y=weather_rent_df['count'],
-     
-    color="blue", legend=False,
     width=0.5
 )
 
