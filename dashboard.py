@@ -91,6 +91,9 @@ with st.sidebar:
         value=[min_date, max_date]
     )
 
+start_date = pd.Timestamp(start_date)
+end_date = pd.Timestamp(end_date)
+
 main_df = hour_df[(hour_df['dateday'] >= str(start_date)) & 
                 (hour_df['dateday'] <= str(end_date))]
 
