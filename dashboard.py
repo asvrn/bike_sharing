@@ -157,7 +157,7 @@ for index, row in enumerate(weather_rent_df['count']):
     ax.text(index, row + 1, str(row), ha='center', va='bottom', fontsize=10, color='white')
 
 ax.set_xlabel(None)
-ax.set_ylabel(None)
+# ax.set_ylabel(None)
 ax.tick_params(axis='x', labelsize=15)
 ax.tick_params(axis='y', labelsize=15)
 ax.set_facecolor('none')
