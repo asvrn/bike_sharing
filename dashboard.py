@@ -150,6 +150,7 @@ weather_rent_df = weather_rent_df.sort_values(by='count', ascending=False)
 sns.barplot(
     x=weather_rent_df.index,
     y=weather_rent_df['count'],
+    color='red',
     width=0.5
 )
 
@@ -162,7 +163,7 @@ ax.tick_params(axis='x', labelsize=15)
 ax.tick_params(axis='y', labelsize=15)
 ax.set_facecolor('none')
 fig.patch.set_alpha(0.0)
-ax.get_yaxis().get_major_formatter().set_scientific(False)
+ax.ticklabel_format(style='plain', axis='y')
 st.pyplot(fig)
 
 # 3
