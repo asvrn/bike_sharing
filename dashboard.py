@@ -150,13 +150,16 @@ weather_rent_df = weather_rent_df.sort_values(by='count', ascending=False)
 sns.barplot(
     x=weather_rent_df.index,
     y=weather_rent_df['count'],
-    color='red',
+    hue=weather_rent_df.index,
+    palette=['pastel'] + ['bright'] * (len(weather_rent_df)-1),
     width=0.5
 )
 
 for index, row in enumerate(weather_rent_df['count']):
     ax.text(index, row + 1, str(row), ha='center', va='bottom', fontsize=10, color='white')
 
+ax.set_xlabel(None)
+ax.set_ylabel(None)
 ax.tick_params(axis='x', labelsize=15)
 ax.tick_params(axis='y', labelsize=15)
 ax.set_facecolor('none')
